@@ -16,21 +16,3 @@ A modern and responsive professional portfolio showcasing my work as a Full Stac
 * Interactive UI transitions and hover effects
 * Custom Image Carousel for project showcases
 * Optimized SEO and Open Graph metadata
-
-## Local Development
-
-To run this project locally:
-
-1. Clone the repository
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-3. Start the development server:
-   ```bash
-   npm run dev
-   ```
-
-## Deployment
-
-This portfolio is configured and optimized for direct deployment onto Vercel.
