@@ -32,7 +32,7 @@ const Contact = () => {
         </a>
       </div>
 
-      <a href="/cv.pdf" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ fontSize: '1.1rem', padding: '14px 28px' }}>
+      <a href="/CV_Luca_Guerra_FrontEnd_Developer.pdf" download="CV_Luca_Guerra_FrontEnd_Developer.pdf" className="btn btn-primary" style={{ fontSize: '1.1rem', padding: '14px 28px' }}>
         <FileText size={20} /> Download Resume
       </a>
     </section>

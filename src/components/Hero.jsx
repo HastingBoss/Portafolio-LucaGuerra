@@ -60,7 +60,7 @@ const Hero = () => {
             <a href="https://www.linkedin.com/in/luca-guerra-a71432272/" target="_blank" rel="noopener noreferrer" className="btn btn-outline" title="LinkedIn">
               <Linkedin size={20} />
             </a>
-            <a href="/cv.pdf" target="_blank" rel="noopener noreferrer" className="btn btn-outline" title="Download CV">
+            <a href="/CV_Luca_Guerra_FrontEnd_Developer.pdf" target="_blank" rel="noopener noreferrer" className="btn btn-outline" title="Download CV">
               <FileText size={20} />
             </a>
           </div>
