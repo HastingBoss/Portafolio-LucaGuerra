@@ -1,17 +1,15 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useLanguage } from '../context/LanguageContext';
 
-const learningList = [
-  "Backend APIs", 
-  "Authentication systems", 
-  "Database integration", 
-  "Full Stack Development (UTN)"
-];
 
 const CurrentlyLearning = () => {
+  const { t } = useLanguage();
+  const learningList = t('learning.list') || [];
+
   return (
     <section id="currently-learning">
-      <h2 style={{ fontSize: '2.5rem', marginBottom: '24px', textAlign: 'center' }}>Currently Learning</h2>
+      <h2 style={{ fontSize: '2.5rem', marginBottom: '24px', textAlign: 'center' }}>{t('learning.title')}</h2>
       
       <div style={{ 
         display: 'flex', 

@@ -3,8 +3,11 @@ import { motion } from 'framer-motion';
 import { FileText } from 'lucide-react';
 import Github from './icons/Github';
 import Linkedin from './icons/Linkedin';
+import { useLanguage } from '../context/LanguageContext';
 
 const Hero = () => {
+  const { t } = useLanguage();
+
   return (
     <section id="hero" style={{ 
       minHeight: '90vh', 
@@ -28,7 +31,7 @@ const Hero = () => {
           marginBottom: '16px',
           display: 'block'
         }}>
-          Frontend Developer | React | JavaScript
+          {t('hero.role')}
         </span>
         
         <h1 style={{ fontSize: 'clamp(3rem, 8vw, 5rem)', lineHeight: '1.1', marginBottom: '24px' }}>
@@ -46,12 +49,12 @@ const Hero = () => {
           margin: '0 auto 40px auto',
           lineHeight: '1.6'
         }}>
-          Full Stack Web Development student at UTN with a Frontend certification. As an enthusiastic <strong>React Developer</strong> and <strong>JavaScript Developer</strong>, I focus on building modern web applications, interactive interfaces, and efficient API integrations.
+          {t('hero.description')}
         </p>
         
         <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap', justifyContent: 'center' }}>
           <a href="#projects" className="btn btn-primary">
-            View Projects
+            {t('hero.viewProjects')}
           </a>
           <div style={{ display: 'flex', gap: '12px' }}>
             <a href="https://github.com/HastingBoss/" target="_blank" rel="noopener noreferrer" className="btn btn-outline" title="GitHub">

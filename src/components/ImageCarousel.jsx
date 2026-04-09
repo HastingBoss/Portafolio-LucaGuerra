@@ -26,7 +26,7 @@ const ImageCarousel = ({ images, title }) => {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.3 }}
-          style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+          style={{ width: '100%', height: '100%', objectFit: 'contain' }}
         />
       </AnimatePresence>
 

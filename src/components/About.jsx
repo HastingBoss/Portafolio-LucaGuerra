@@ -1,7 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useLanguage } from '../context/LanguageContext';
 
 const About = () => {
+  const { t } = useLanguage();
+
   return (
     <section id="about">
       <motion.div 
@@ -10,16 +13,16 @@ const About = () => {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
       >
-        <h2 style={{ fontSize: '2.5rem', marginBottom: '24px' }}>About Me</h2>
+        <h2 style={{ fontSize: '2.5rem', marginBottom: '24px' }}>{t('about.title')}</h2>
         <div style={{ color: 'var(--text-dim)', fontSize: '1.1rem', maxWidth: '800px', lineHeight: '1.7' }}>
           <p style={{ marginBottom: '16px' }}>
-            I am an advanced <strong>Full Stack Web Development student at UTN</strong>, and I hold a formal certification as a <strong>Frontend Developer</strong>.
+            {t('about.p1')}
           </p>
           <p style={{ marginBottom: '16px' }}>
-            I have solid experience building modern web applications from scratch, covering everything from technical architecture to the final polish of the user experience and UI.
+            {t('about.p2')}
           </p>
           <p>
-            My constant goal is to perfect my skills in modern web technologies, robust API integrations, and creating digital products that truly deliver value.
+            {t('about.p3')}
           </p>
         </div>
       </motion.div>

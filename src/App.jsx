@@ -1,15 +1,20 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
 import Projects from './components/Projects';
 import Technologies from './components/Technologies';
 import CurrentlyLearning from './components/CurrentlyLearning';
 import Contact from './components/Contact';
+import { useLanguage } from './context/LanguageContext';
 
 function App() {
+  const { t } = useLanguage();
+
   return (
     <div className="app-container">
+      <Navbar />
       <header>
         <Hero />
       </header>
@@ -30,7 +35,7 @@ function App() {
           fontSize: '0.9rem',
           borderTop: '1px solid var(--border)'
         }}>
-          © {new Date().getFullYear()} Luca Guerra. Built with React & Vite.
+          © {new Date().getFullYear()} {t('footer.builtBy')}
         </div>
       </footer>
     </div>
