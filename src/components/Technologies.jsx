@@ -6,7 +6,7 @@ const techList = [
   { name: "React", src: "https://cdn.simpleicons.org/react/61DAFB" },
   { name: "JavaScript", src: "https://cdn.simpleicons.org/javascript/F7DF1E" },
   { name: "HTML", src: "https://cdn.simpleicons.org/html5/E34F26" },
-  { name: "CSS", src: "https://cdn.simpleicons.org/css3/1572B6" },
+  { name: "CSS", src: "https://cdn.simpleicons.org/css/1572B6" },
   { name: "Git", src: "https://cdn.simpleicons.org/git/F05032" },
   { name: "GitHub", src: "https://cdn.simpleicons.org/github/FFFFFF" },
   { name: "Vercel", src: "https://cdn.simpleicons.org/vercel/FFFFFF" },

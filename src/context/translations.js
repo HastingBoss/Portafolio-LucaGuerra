@@ -7,7 +7,7 @@ export const translations = {
       tech: "Tech Stack",
     },
     hero: {
-      role: "Frontend Developer | React | JavaScript",
+      role: "Web Developer | Frontend Developer | React",
       description: "Full Stack Web Development student at UTN with a Frontend certification. As an enthusiastic React Developer and JavaScript Developer, I focus on building modern web applications, interactive interfaces, and efficient API integrations.",
       viewProjects: "View Projects",
     },
@@ -87,7 +87,7 @@ export const translations = {
       tech: "Stack",
     },
     hero: {
-      role: "Desarrollador Frontend | React | JavaScript",
+      role: "Programador Web | Desarrollador Frontend | React",
       description: "Estudiante de Desarrollo Web Full Stack en la UTN con certificación como Frontend Developer. Entusiasta de React y JavaScript, me enfoco en crear aplicaciones web modernas, interfaces interactivas e integraciones eficientes de APIs.",
       viewProjects: "Ver Proyectos",
     },

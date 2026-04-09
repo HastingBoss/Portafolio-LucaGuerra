@@ -15,6 +15,35 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const handleNavClick = (e, targetId) => {
+    e.preventDefault();
+    const element = document.getElementById(targetId);
+    if (element) {
+      const targetPosition = element.getBoundingClientRect().top + window.pageYOffset - 80;
+      const startPosition = window.pageYOffset;
+      const distance = targetPosition - startPosition;
+      const duration = 800; // ms
+      let start = null;
+
+      // Easing function for smooth deceleration
+      const easeOutQuart = (time) => 1 - (--time) * time * time * time;
+
+      const animation = (currentTime) => {
+        if (start === null) start = currentTime;
+        const timeElapsed = currentTime - start;
+        const progress = Math.min(timeElapsed / duration, 1);
+        
+        window.scrollTo(0, startPosition + distance * easeOutQuart(progress));
+        
+        if (timeElapsed < duration) {
+          requestAnimationFrame(animation);
+        }
+      };
+
+      requestAnimationFrame(animation);
+    }
+  };
+
   return (
     <motion.nav
       initial={{ y: -100 }}
@@ -45,15 +74,30 @@ const Navbar = () => {
         </div>
         
         <div style={{ display: 'flex', gap: '20px', alignItems: 'center' }}>
-          <a href="#projects" style={{ color: 'var(--text-main)', textDecoration: 'none', fontSize: '0.95rem', fontWeight: 500 }}>
-            {t('nav.projects')}
-          </a>
-          <a href="#about" style={{ color: 'var(--text-main)', textDecoration: 'none', fontSize: '0.95rem', fontWeight: 500 }}>
+          <motion.a 
+            href="#about" 
+            className="nav-link"
+            onClick={(e) => handleNavClick(e, 'about')}
+            whileTap={{ scale: 0.95 }}
+          >
             {t('nav.about')}
-          </a>
-          <a href="#contact" style={{ color: 'var(--text-main)', textDecoration: 'none', fontSize: '0.95rem', fontWeight: 500 }}>
+          </motion.a>
+          <motion.a 
+            href="#projects" 
+            className="nav-link"
+            onClick={(e) => handleNavClick(e, 'projects')}
+            whileTap={{ scale: 0.95 }}
+          >
+            {t('nav.projects')}
+          </motion.a>
+          <motion.a 
+            href="#contact" 
+            className="nav-link"
+            onClick={(e) => handleNavClick(e, 'contact')}
+            whileTap={{ scale: 0.95 }}
+          >
             {t('nav.contact')}
-          </a>
+          </motion.a>
           
           <button 
             onClick={toggleLanguage}

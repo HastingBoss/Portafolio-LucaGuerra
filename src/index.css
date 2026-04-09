@@ -114,6 +114,29 @@ section {
   border-color: var(--text-main);
 }
 
+/* Navbar Link Styles */
+.nav-link {
+  color: var(--text-main);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 20px;
+  transition: all 0.2s ease;
+  background: transparent;
+}
+
+.nav-link:hover {
+  color: var(--primary);
+}
+
+.nav-link:active {
+  background: rgba(156, 163, 175, 0.2); /* grey pill with transparency */
+  backdrop-filter: var(--glass);
+  -webkit-backdrop-filter: var(--glass);
+  color: white;
+}
+
 /* Animations */
 @keyframes fadeInUp {
   from {
