@@ -54,9 +54,9 @@ const ProjectCard = ({ project, t }) => {
         )}
       </div>
 
-      <div className="padded-card" style={{ flexGrow: 1, display: 'flex', flexDirection: 'column' }}>
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '12px', gap: '16px' }}>
-          <h3 style={{ fontSize: '1.8rem', margin: 0 }}>{title}</h3>
+      <div style={{ padding: '20px 24px', flexGrow: 1, display: 'flex', flexDirection: 'column' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '8px', gap: '16px' }}>
+          <h3 style={{ fontSize: '1.4rem', margin: 0 }}>{title}</h3>
           {(keyFeatures || architecture || whyBuiltThis) && (
             <button 
               onClick={() => setShowInfo(!showInfo)}
@@ -69,7 +69,7 @@ const ProjectCard = ({ project, t }) => {
           )}
         </div>
         
-        <p style={{ color: 'var(--text-dim)', marginBottom: '24px', lineHeight: '1.6' }}>{description}</p>
+        <p style={{ color: 'var(--text-dim)', marginBottom: '16px', lineHeight: '1.5', fontSize: '0.9rem' }}>{description}</p>
         
         <AnimatePresence>
           {showInfo && (
@@ -114,7 +114,7 @@ const ProjectCard = ({ project, t }) => {
         </AnimatePresence>
 
         <div style={{ marginTop: 'auto' }}>
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginBottom: '24px' }}>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px', marginBottom: '16px' }}>
             {stack.map((tech, i) => (
               <span key={i} style={{ 
                 fontSize: '0.75rem', 

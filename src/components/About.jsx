@@ -12,9 +12,10 @@ const About = () => {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
+        style={{ padding: '28px' }}
       >
-        <h2 style={{ fontSize: '2.5rem', marginBottom: '24px' }}>{t('about.title')}</h2>
-        <div style={{ color: 'var(--text-dim)', fontSize: '1.1rem', maxWidth: '800px', lineHeight: '1.7' }}>
+        <h2 style={{ fontSize: '2.5rem', marginBottom: '24px', textAlign: 'center' }}>{t('about.title')}</h2>
+        <div style={{ color: 'var(--text-dim)', fontSize: '1.1rem', maxWidth: '800px', lineHeight: '1.7', textAlign: 'center', margin: '0 auto' }}>
           <p style={{ marginBottom: '16px' }}>
             {t('about.p1')}
           </p>

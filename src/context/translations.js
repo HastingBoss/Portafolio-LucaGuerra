@@ -2,7 +2,7 @@ export const translations = {
   en: {
     nav: {
       projects: "Projects",
-      contact: "Contact",
+      contact: "Contact Me",
       about: "About",
       tech: "Tech Stack",
     },
@@ -82,7 +82,7 @@ export const translations = {
   es: {
     nav: {
       projects: "Proyectos",
-      contact: "Contacto",
+      contact: "Contáctame",
       about: "Sobre mí",
       tech: "Stack",
     },
