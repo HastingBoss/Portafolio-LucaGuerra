@@ -78,10 +78,10 @@ const Navbar = () => {
           LG
         </motion.a>
         
-        <div style={{ display: 'flex', gap: '20px', alignItems: 'center' }}>
+        <div className="nav-links-group" style={{ display: 'flex', gap: '20px', alignItems: 'center' }}>
           <motion.a 
             href="#about" 
-            className="nav-link"
+            className="nav-link nav-link-hidden-mobile"
             onClick={(e) => handleNavClick(e, 'about')}
             whileTap={{ scale: 0.95 }}
           >
@@ -89,7 +89,7 @@ const Navbar = () => {
           </motion.a>
           <motion.a 
             href="#projects" 
-            className="nav-link"
+            className="nav-link nav-link-hidden-mobile"
             onClick={(e) => handleNavClick(e, 'projects')}
             whileTap={{ scale: 0.95 }}
           >
@@ -97,7 +97,7 @@ const Navbar = () => {
           </motion.a>
           <motion.a 
             href="#contact" 
-            className="nav-link"
+            className="nav-link nav-contact-link"
             onClick={(e) => handleNavClick(e, 'contact')}
             whileTap={{ scale: 0.95 }}
           >
@@ -106,6 +106,7 @@ const Navbar = () => {
           
           <button 
             onClick={toggleLanguage}
+            className="nav-lang-btn"
             style={{
               background: 'transparent',
               border: '1px solid var(--border)',

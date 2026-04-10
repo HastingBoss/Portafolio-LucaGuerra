@@ -179,6 +179,42 @@ section {
   background: var(--text-dim);
 }
 
+/* Responsive Navbar */
+@media (max-width: 640px) {
+  /* Hide About & Projects links — keep only logo, Contact and WhatsApp */
+  .nav-link-hidden-mobile {
+    display: none !important;
+  }
+
+  /* Hide language toggle button */
+  .nav-lang-btn {
+    display: none !important;
+  }
+
+  /* Tighten the right-side group gap */
+  .nav-links-group {
+    gap: 12px;
+  }
+
+  /* Compact the contact link pill so it fits small screens */
+  .nav-contact-link {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 400px) {
+  /* Further reduce gap and font-size so everything fits at 320px */
+  .nav-links-group {
+    gap: 8px;
+  }
+
+  .nav-contact-link {
+    padding: 5px 10px;
+    font-size: 0.8rem;
+  }
+}
+
 @media (max-width: 768px) {
   section {
     padding: 60px 16px;
